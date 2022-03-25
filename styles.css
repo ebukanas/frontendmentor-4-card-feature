@@ -1,0 +1,141 @@
+/* font-family: 'Poppins', sans-serif; */
+
+:root {
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: #549df2;
+
+  --dark-blue: #4c4e61;
+  --grayish-blue: hsl(229, 6%, 66%);
+  --light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+  background-color: var(--light-gray);
+  padding: 1em;
+  height:100vh;
+}
+
+.container {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-container {
+  max-height:100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0fr 1fr 1fr 1fr 1fr;
+  grid-gap: 2em 2em;
+  grid-template-areas: 
+    'header header header'
+    '. card-2 .'
+    'card-1 card-2 card-4'
+    'card-1 card-3 card-4'
+    '. card-3 .'
+}
+
+.header {
+  text-align:center;
+  font-family: 'Poppins', sans-serif;
+  grid-area: header;
+  margin-bottom: 1em;
+}
+
+.header span {
+  font-size: 2.3em;
+  font-weight: 200;
+  color: var(--dark-blue);
+  margin: 0;
+}
+
+.header h1 {
+  color: var(--dark-blue);
+  font-weight: 600;
+  font-size: 2.3em;
+  margin: 0;
+}
+
+.header p {
+  color: var(--grayish-blue);
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.card {
+  background-color: white;
+  padding: 2em;
+  font-family: 'Poppins', sans-serif;
+  max-height: 20em;
+  max-width: 20em;
+  border-radius: 0.5em;
+  box-shadow: #549df245 0px 5px 15px 0px;
+}
+
+.card h1 {
+  color: var(--dark-blue);
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.card p {
+  color: var(--grayish-blue);
+  font-weight: 200;
+  font-size: 12px;
+  margin-right: 5em;
+}
+
+.card img {
+  float:right;
+  margin-top: 40px;
+}
+
+.card-1 {
+  grid-area: card-1;
+  border-top: solid var(--cyan) 5px;
+}
+
+.card-2 {
+  grid-area: card-2;
+  border-top: solid var(--red) 5px;
+}
+
+.card-3 {
+  grid-area: card-3;
+  border-top: solid var(--orange) 5px;
+}
+
+.card-4 {
+  grid-area: card-4;
+  border-top: solid var(--blue) 5px;
+}
+
+@media screen and (max-width: 375px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 2em 2em;
+    grid-template-areas: 
+      'card-1'
+      'card-2'
+      'card-3'
+      'card-4'
+  }
+
+  .header h1 {
+    font-size: 1.5em;
+  }
+
+  .header span {
+    font-size: 1.5em;
+  }
+
+  .header p {
+    font-size: 0.8em;
+  }
+
+}
