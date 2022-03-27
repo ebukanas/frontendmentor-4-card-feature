@@ -14,7 +14,11 @@
 body {
   background-color: var(--light-gray);
   padding: 1em;
-  max-height:100vh;
+  min-height:100vh;
+}
+
+.test {
+  display: flex;
 }
 
 .container {
@@ -22,6 +26,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .card-container {
@@ -125,6 +130,10 @@ body {
       'card-2'
       'card-3'
       'card-4'
+  }
+
+  .container {
+    margin-top:4em;
   }
 
   .card-container {
