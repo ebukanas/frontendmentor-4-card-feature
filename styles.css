@@ -15,7 +15,11 @@ body {
   background-color: var(--light-gray);
   padding: 1em;
   min-height:100vh;
+}
 
+.test {
+  display: flex;
+}
 
 .container {
   display: flex;
